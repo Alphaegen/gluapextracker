@@ -1,12 +1,29 @@
-const path = require('path');
+const path = require("path");
 
 module.exports = {
-  outputDir: path.resolve(__dirname, '../public'),
+  outputDir: path.resolve(__dirname, "../public"),
   devServer: {
     proxy: {
-      '/api/v1': {
-        target: 'http://localhost:5000'
+      "/api/v1": {
+        target: "http://localhost:5000"
       }
+    }
+  },
+
+  pwa: {
+    name: "GLU Apex Tracker",
+    short_name: "GAT",
+    themeColor: "#4DBA87",
+    msTileColor: "#000000",
+    appleMobileWebAppCapable: "yes",
+    appleMobileWebAppStatusBarStyle: "black",
+
+    // configure the workbox plugin
+    workboxPluginMode: "InjectManifest",
+    workboxOptions: {
+      // swSrc is required in InjectManifest mode.
+      swSrc: "dev/sw.js"
+      // ...other Workbox options...
     }
   }
 };
