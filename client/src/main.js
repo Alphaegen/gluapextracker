@@ -10,14 +10,14 @@ Vue.use(VueToasted, {
   iconPack: "fontawesome"
 });
 
-if ("serviceWorker" in navigator) {
-  try {
-    navigator.serviceWorker.register("sw.js");
-    console.log("ServiceWorker Registered");
-  } catch (error) {
-    console.log("ServiceWorker Not Registered");
-  }
-}
+// if ("serviceWorker" in navigator) {
+//   try {
+//     navigator.serviceWorker.register("sw.js");
+//     console.log("ServiceWorker Registered");
+//   } catch (error) {
+//     console.log("ServiceWorker Not Registered");
+//   }
+// }
 
 new Vue({
   router,
