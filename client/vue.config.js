@@ -14,6 +14,13 @@ module.exports = {
     name: "GLU Apex Tracker",
     short_name: "GAT",
     themeColor: "#4DBA87",
-    msTileColor: "#000000"
+    msTileColor: "#000000",
+    icons: [
+      {
+        src: "assets/logo.png",
+        sizes: "192x192",
+        type: "image/png"
+      }
+    ]
   }
 };
