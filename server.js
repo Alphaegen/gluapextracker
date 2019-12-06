@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static(__dirname + "/public/"));
 
   app.get("/service-worker.js", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "public", "service-worker.js"));
+    res.sendFile(path.resolve(__dirname, "public", "/public/service-worker.js"));
   });
 
   // Handle SPA

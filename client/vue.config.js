@@ -14,8 +14,6 @@ module.exports = {
     name: "GLU Apex Tracker",
     short_name: "GAT",
     themeColor: "#4DBA87",
-    msTileColor: "#000000",
-    appleMobileWebAppCapable: "yes",
-    appleMobileWebAppStatusBarStyle: "black"
+    msTileColor: "#000000"
   }
 };
