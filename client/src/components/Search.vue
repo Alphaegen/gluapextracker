@@ -5,20 +5,14 @@
       <div class="form-group">
         <label for="platform">Platform</label>
         <select name="platform" id="platform" v-model="platform">
-          <option value="psn">Playstation</option>
-          <option value="xbl">Xbox</option>
-          <option value="Origin">Origin</option>
+          <option value="1">Playstation</option>
+          <option value="2">Xbox</option>
+          <option value="5">Origin</option>
         </select>
       </div>
       <div class="form-group">
         <label for="gamertag">Gamertag</label>
-        <input
-          type="text"
-          name="text"
-          v-model="gamertag"
-          id="gamertag"
-          placeholder="Origin ID, Xbox Live gamertag, PSN ID, etc"
-        />
+        <input type="text" name="text" v-model="gamertag" id="gamertag" placeholder="Origin ID, Xbox Live gamertag, PSN ID, etc" />
       </div>
       <div class="form-group">
         <input type="submit" value="Submit" class="btn" />
@@ -54,5 +48,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>
