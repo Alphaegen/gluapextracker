@@ -17,7 +17,7 @@ module.exports = {
     msTileColor: "#000000",
     icons: [
       {
-        src: "assets/logo.png",
+        src: "assets/ApexLegends.png",
         sizes: "192x192",
         type: "image/png"
       }
