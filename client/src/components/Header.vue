@@ -6,10 +6,11 @@
 
 <script>
 export default {
-  name: "Header",
+  logox500: require('@/assets/apex-legends.png'),
+  name: 'Header',
   data() {
     return {
-      image: require("@/assets/logo.png")
+      image: require('@/assets/logo.png')
     };
   }
 };

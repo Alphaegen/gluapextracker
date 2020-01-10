@@ -5,14 +5,14 @@
     </div>
 
     <div v-if="error">
-      <h1>{{error}}</h1>
+      <h1>{{ error }}</h1>
       <router-link to="/">Go Back</router-link>
     </div>
 
     <div v-if="profileData" class="container">
       <h1 class="gamertag">
         <img :src="profileData.platformInfo.avatarUrl" alt class="platform-avatar" />
-        {{profileData.platformInfo.platformUserId}}
+        {{ profileData.platformInfo.platformUserId }}
       </h1>
       <div class="grid">
         <div>
@@ -22,34 +22,34 @@
           <ul>
             <li>
               <h4>Selected Legend</h4>
-              <p>{{profileData.metadata.activeLegendName}}</p>
+              <p>{{ profileData.metadata.activeLegendName }}</p>
             </li>
             <li v-if="profileData.segments[0].stats.season2Wins">
               <h4>Season 2 Wins</h4>
               <p>
-                {{profileData.segments[0].stats.season2Wins.displayValue}}
-                <span>({{profileData.segments[0].stats.season2Wins.percentile}})</span>
+                {{ profileData.segments[0].stats.season2Wins.displayValue }}
+                <span>({{ profileData.segments[0].stats.season2Wins.percentile }})</span>
               </p>
             </li>
             <li v-if="profileData.segments[0].stats.level">
               <h4>Apex Level</h4>
               <p>
-                {{profileData.segments[0].stats.level.displayValue}}
-                <span>({{profileData.segments[0].stats.level.percentile}}%)</span>
+                {{ profileData.segments[0].stats.level.displayValue }}
+                <span>({{ profileData.segments[0].stats.level.percentile }}%)</span>
               </p>
             </li>
             <li v-if="profileData.segments[0].stats.kills">
               <h4>Lifetime Kills</h4>
               <p>
-                {{profileData.segments[0].stats.kills.displayValue}}
-                <span>({{profileData.segments[0].stats.kills.percentile}}%)</span>
+                {{ profileData.segments[0].stats.kills.displayValue }}
+                <span>({{ profileData.segments[0].stats.kills.percentile }}%)</span>
               </p>
             </li>
             <li v-if="profileData.segments[0].stats.damage">
               <h4>Damage Done</h4>
               <p>
-                {{profileData.segments[0].stats.damage.displayValue}}
-                <span>({{profileData.segments[0].stats.damage.percentile}}%)</span>
+                {{ profileData.segments[0].stats.damage.displayValue }}
+                <span>({{ profileData.segments[0].stats.damage.percentile }}%)</span>
               </p>
             </li>
           </ul>
@@ -61,9 +61,9 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from 'axios';
 export default {
-  name: "Profile",
+  name: 'Profile',
   data() {
     return {
       loading: false,
@@ -72,17 +72,14 @@ export default {
     };
   },
   beforeCreate() {
-    document.body.className = "body-bg-no-image";
+    document.body.className = 'body-bg-no-image';
   },
   async created() {
     this.loading = true;
     try {
-      const res = await axios.get(
-        `/api/v1/profile/${this.$route.params.platform}/${this.$route.params.gamertag}`
-      );
+      const res = await axios.get(`/api/v1/profile/${this.$route.params.platform}/${this.$route.params.gamertag}`);
 
       this.profileData = res.data.data;
-      console.log(this.profileData);
       this.loading = false;
     } catch (err) {
       this.loading = false;
