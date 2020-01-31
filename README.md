@@ -1,6 +1,7 @@
 # GLU Apex Legends Tracker
 
->> This app was created using Vue + NodeJS and it's deployed on heroku on this link: glu-apextracker.herokuapp.com/
+>> This app was created using Vue + NodeJS and it's deployed on heroku on this link: 
+http://glu-apextracker.herokuapp.com/
 
 
 ## How it works
